@@ -1,0 +1,40 @@
+body{
+    font-family: monospace;
+    background-color: #E6FAFC;
+    color: #2B2D42;
+    padding-left: 100px;
+    padding-top: 200px;
+    padding-right: 100px;
+}
+body>header>h1>a{
+  color: #124559; 
+  text-decoration: none; 
+}
+
+body>nav>ul>li{
+display: inline;
+}
+
+body>article>section{
+  text-align: justify;
+}
+
+section.Aviso{
+background-color: #3A7CA5;
+color: #2B2D42;
+padding-left: 20px;
+padding-right: 20px;
+padding-top: 20px;
+padding-bottom: 20px;
+}
+
+#id-example-one{
+  background-color: #16425B;
+  color: #c5d5ea;
+  padding: 5% 5% 5% 5%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+
+
