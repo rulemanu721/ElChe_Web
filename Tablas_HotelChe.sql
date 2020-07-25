@@ -1,10 +1,10 @@
 -- Creada el:       07/22/2020
 -- Modificada el:   07/22/2020
 
---CreaciÛn de tablas del Proyecto Final Hotel
+--Creaci√≥n de tablas del Proyecto Final Hotel
 --
 --
---CreaciÛn de Base de Datos
+--Creaci√≥n de Base de Datos
 create database hotel_che
 
 --Uso de la Base de Datos Creada
@@ -41,7 +41,7 @@ habitaciones_disponibilidad int not null
 )
 
 -- Guarda los porcentajes de promociones existentes
--- Si no hay promocion, se le asignar· 0 en autom·tico a la reservaciÛn
+-- Si no hay promocion, se le asignar√° 0 en autom√°tico a la reservaci√≥n
 Create table promociones(
 promociones_id int not null primary key identity(1,1),
 promociones_porcentaje int not null
@@ -65,9 +65,9 @@ tarjetas_tipo_id int not null primary key identity(1,1),
 tarjetas_tipo_nombre varchar(255) not null
 )
 
--- Guarda datos de tarjetas y los usuarios a los que est·n asignados estas tarjetas
+-- Guarda datos de tarjetas y los usuarios a los que est√°n asignados estas tarjetas
 -- La variable de tarjetas_usuario guarda a quien le pertenece esa tarjeta
--- La variable tarjetas_year guarda el aÒo de expiracion
+-- La variable tarjetas_year guarda el a√±o de expiracion
 create table tarjetas(
 tarjetas_id int not null primary key identity(1,1),
 tarjetas_tipo int foreign key references tarjetas_tipo(tarjetas_tipo_id),
@@ -84,6 +84,7 @@ tarjetas_usuario int not null foreign key references usuarios(usuarios_id)
 Create table reservacion(
 reservacion_id int not null primary key identity (1,1),
 reservacion_numero int not null,
+reservacion_usuario int not null foreign key references usuarios(usuarios_id),
 reservacion_habitacion int not null foreign key references numero(numero_id),
 reservacion_habitacion_tipo int not null foreign key references habitaciones(habitaciones_id),
 reservacion_ingreso date not null,
